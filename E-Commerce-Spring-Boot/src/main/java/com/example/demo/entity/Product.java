@@ -1,9 +1,11 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+@Entity
 public class Product {
 	
     @Id
@@ -12,6 +14,8 @@ public class Product {
     private String name;
     private Double price;
     private String description;
+    
+    
     // Getters and setters
 	public Long getId() {
 		return id;

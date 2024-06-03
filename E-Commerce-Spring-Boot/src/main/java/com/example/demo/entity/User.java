@@ -1,5 +1,8 @@
 package com.example.demo.entity;
 
+import com.example.demo.enums.UserRole;
+
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -58,13 +61,6 @@ public class User {
 		this.password = password;
 	}
 
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
 
 	public String getAddress() {
 		return address;
