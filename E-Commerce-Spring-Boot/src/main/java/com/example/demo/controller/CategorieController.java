@@ -18,7 +18,7 @@ import com.example.demo.services.CategorieService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/categories")
+@RequestMapping("/api/categories")
 public class CategorieController {
 	
 	 @Autowired

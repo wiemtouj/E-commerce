@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Categorie } from 'src/app/models/categorie';
+import { CategorieService } from 'src/app/services/categorie.service';
 
 @Component({
   selector: 'app-categories',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  categories!: Categorie[];
+  
+  constructor(private categorieService: CategorieService) { }
+
 
   ngOnInit(): void {
+    this.categorieService.getCategories().subscribe(data => {
+      this.categories = data;
+    });
+  }
+
+  deleteCategorie(id: number): void {
+    this.categorieService.deleteCategorie(id).subscribe(() => {
+      this.categories = this.categories.filter(categorie => categorie.id !== id);
+    });
   }
 
 }

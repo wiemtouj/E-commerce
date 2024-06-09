@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CategorieService {
 
-  private apiUrl = 'http://localhost:8081/categories';
+  private apiUrl = 'http://localhost:8081/api/categories';
 
   constructor(private http: HttpClient) { }
 
@@ -31,4 +31,5 @@ export class CategorieService {
   deleteCategorie(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
 }

@@ -19,9 +19,6 @@ public class Categorie {
     private String nom;
     private String description;
 
-    @OneToMany(mappedBy = "categorie", cascade = CascadeType.ALL)
-    private List<Product> product;
-
 	public int getId() {
 		return id;
 	}
@@ -46,13 +43,7 @@ public class Categorie {
 		this.description = description;
 	}
 
-	public List<Product> getProduct() {
-		return product;
-	}
 
-	public void setProduct(List<Product> product) {
-		this.product = product;
-	}
     
     
     

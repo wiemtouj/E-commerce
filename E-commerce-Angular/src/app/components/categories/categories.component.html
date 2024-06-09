@@ -1,1 +1,8 @@
-<p>categories works!</p>
+<h2>Catégories</h2>
+<ul>
+    <li *ngFor="let categorie of categories">
+        {{ categorie.nom }}
+        {{ categorie.description }}
+        <button (click)="deleteCategorie(categorie.id)">Supprimer</button>
+    </li>
+</ul>
