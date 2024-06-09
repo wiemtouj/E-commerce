@@ -3,18 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductFormComponent } from './product-form/product-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ProduitsComponent } from './components/produits/produits.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { ProduitFormComponent } from './components/produit-form/produit-form.component';
+import { CategorieFormComponent } from './components/categorie-form/categorie-form.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
-    ProductFormComponent
+    ProduitsComponent,
+    CategoriesComponent,
+    ProduitFormComponent,
+    CategorieFormComponent,
   ],
   imports: [
     BrowserModule,

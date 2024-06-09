@@ -21,5 +21,13 @@ public class CategorieService {
 	  public Categorie findById(int id) {
 	        return categorieRepository.findById(id).orElse(null);
 	  }
+	  
+	  public Categorie save(Categorie categorie) {
+	        return categorieRepository.save(categorie);
+	    }
+
+	    public void deleteById(int id) {
+	        categorieRepository.deleteById(id);
+	    }
 
 }
