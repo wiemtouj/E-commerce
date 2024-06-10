@@ -13,8 +13,8 @@ const routes: Routes = [
   { path: 'produit-form/:id', component: ProduitFormComponent },
   { path: 'categorie-form', component: CategorieFormComponent },
   { path: 'categorie-form/:id', component: CategorieFormComponent },
-  { path: '', redirectTo: '/produits', pathMatch: 'full' }, // Redirection vers 'produits' par défaut
-  { path: '**', redirectTo: '/produits' } // Redirection pour les chemins non trouvés
+ // { path: '', redirectTo: '/produits', pathMatch: 'full' }, // Redirection vers 'produits' par défaut
+  //{ path: '**', redirectTo: '/produits' } // Redirection pour les chemins non trouvés
 ];
 
 

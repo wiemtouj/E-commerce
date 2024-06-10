@@ -13,7 +13,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProduitFormComponent implements OnInit {
 
   produit: Product = new Product();
-  categories!: Categorie[];
+  categories: Categorie[] = [];
 
   constructor(private produitService: ProductService,
     private categorieService: CategorieService,
@@ -24,20 +24,12 @@ export class ProduitFormComponent implements OnInit {
     this.categorieService.getCategories().subscribe(data => {
       this.categories = data;
     });
-
-    const id = this.route.snapshot.paramMap.get('id');
-
-    if (id) {
-      this.produitService.getProduitById(+id).subscribe(data => {
-        this.produit = data;
-      });
-    }
+    
   }
 
   saveProduit(): void {
     if (this.produit.id) {
       this.produitService.updateProduit(this.produit).subscribe(() => {
-        this.router.navigate(['/produits']);
       });
     } else {
       this.produitService.createProduit(this.produit).subscribe(() => {
@@ -45,6 +37,8 @@ export class ProduitFormComponent implements OnInit {
       });
     }
   }
+
+  
 
 
 

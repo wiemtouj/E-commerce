@@ -13,9 +13,9 @@
         <input [(ngModel)]="produit.prix" name="prix" type="number">
     </div>
     <div>
-        <label>Catégorie</label>
-        <select [(ngModel)]="produit.categorie.id" name="categorie">
-            <option *ngFor="let categorie of categories" [value]="categorie.id">{{ categorie.nom }}</option>
+        <label for="categorie">Catégorie</label>
+        <select id="categorie" [(ngModel)]="produit.categorie" name="categorie" required>
+            <option *ngFor="let categorie of categories" [ngValue]="categorie">{{ categorie.nom }}</option>
         </select>
     </div>
     <button type="submit">Enregistrer</button>

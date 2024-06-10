@@ -2,7 +2,7 @@
 <ul>
     <li *ngFor="let produit of produits">
         {{ produit.nom }} - {{ produit.prix }} €
-        {{produit.categorie}}
+        {{produit.categorie.nom}}
         <button (click)="deleteProduit(produit.id)">Supprimer</button>
     </li>
 </ul>
