@@ -9,6 +9,7 @@ import { ProduitsComponent } from './components/produits/produits.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ProduitFormComponent } from './components/produit-form/produit-form.component';
 import { CategorieFormComponent } from './components/categorie-form/categorie-form.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -24,7 +25,8 @@ import { CategorieFormComponent } from './components/categorie-form/categorie-fo
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule // Add FormsModule here
+    FormsModule,
+    AppRoutingModule // Add FormsModule here
 
   ],
   providers: [],

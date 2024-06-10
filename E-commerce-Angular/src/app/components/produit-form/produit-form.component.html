@@ -1,1 +1,22 @@
-<p>produit-form works!</p>
+<h2>Produit Form</h2>
+<form (ngSubmit)="saveProduit()">
+    <div>
+        <label>Nom</label>
+        <input [(ngModel)]="produit.nom" name="nom">
+    </div>
+    <div>
+        <label>Description</label>
+        <input [(ngModel)]="produit.description" name="description">
+    </div>
+    <div>
+        <label>Prix</label>
+        <input [(ngModel)]="produit.prix" name="prix" type="number">
+    </div>
+    <div>
+        <label>Catégorie</label>
+        <select [(ngModel)]="produit.categorie.id" name="categorie">
+            <option *ngFor="let categorie of categories" [value]="categorie.id">{{ categorie.nom }}</option>
+        </select>
+    </div>
+    <button type="submit">Enregistrer</button>
+</form>
