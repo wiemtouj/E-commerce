@@ -1,1 +1,14 @@
-<p>categorie-form works!</p>
+<h2>Categorie Form</h2>
+<form (ngSubmit)="saveCategorie()">
+    <div>
+        <label>Nom</label>
+        <input [(ngModel)]="categorie.nom" name="nom">
+    </div>
+    <div>
+        <label>Description</label>
+        <input [(ngModel)]="categorie.description" name="description">
+    </div>
+    
+        
+    <button type="submit">Enregistrer</button>
+</form>
