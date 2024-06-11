@@ -11,6 +11,7 @@ import { ProduitFormComponent } from './components/produit-form/produit-form.com
 import { CategorieFormComponent } from './components/categorie-form/categorie-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -22,6 +23,7 @@ import { HeaderComponent } from './components/header/header.component';
     ProduitFormComponent,
     CategorieFormComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
