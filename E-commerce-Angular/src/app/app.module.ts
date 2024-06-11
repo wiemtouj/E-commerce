@@ -12,6 +12,7 @@ import { CategorieFormComponent } from './components/categorie-form/categorie-fo
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 
@@ -24,6 +25,7 @@ import { FooterComponent } from './components/footer/footer.component';
     CategorieFormComponent,
     HeaderComponent,
     FooterComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
