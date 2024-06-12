@@ -60,10 +60,5 @@ public class ProductController {
 	        produitService.deleteById(id);
 	    }
 	    
-	    @GetMapping
-	    public List<Product> getProducts(@RequestParam(required = false) Integer categoryId) {
-	     
-	        return produitService.findProduitByCategorie(categoryId);// Assurez-vous d'avoir cette méthode dans ProductService
-	    }
-
+	 
 }

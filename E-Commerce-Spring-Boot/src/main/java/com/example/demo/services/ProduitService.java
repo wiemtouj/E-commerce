@@ -31,8 +31,8 @@ public class ProduitService {
 	        produitRepository.deleteById(id);
 	    }
 	    
-	    public List<Product> findProduitByCategorie(Integer idCategorie) {
-	        return produitRepository.findByCategoryId(idCategorie);
+	    public List<Product> getProductsByCategory(Long categoryId) {
+	        return produitRepository.findByCategorie_Id(categoryId);
 	    }
 	    
 

@@ -28,14 +28,7 @@ export class ProduitFormComponent implements OnInit {
   }
 
   saveProduit(): void {
-    if (this.produit.id) {
-      this.produitService.updateProduit(this.produit).subscribe(() => {
-      });
-    } else {
-      this.produitService.createProduit(this.produit).subscribe(() => {
-        this.router.navigate(['/produits']);
-      });
-    }
+  
   }
 
   

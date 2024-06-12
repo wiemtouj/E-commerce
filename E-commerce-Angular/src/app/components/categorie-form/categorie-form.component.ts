@@ -20,14 +20,7 @@ export class CategorieFormComponent implements OnInit {
   }
 
   saveCategorie(): void {
-    if (this.categorie.id) {
-      this.categorieService.updateCategorie(this.categorie).subscribe(() => {
-      });
-    } else {
-      this.categorieService.createCategorie(this.categorie).subscribe(() => {
-        this.router.navigate(['/categorie']);
-      });
-    }
+ 
   }
 
 }
