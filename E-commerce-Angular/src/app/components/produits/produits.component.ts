@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { error } from 'console';
 import { Categorie } from 'src/app/models/categorie';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
@@ -19,9 +20,17 @@ export class ProduitsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
    
-    this.produitService.getProduits().subscribe(data => {
-      this.produits = data;
+    this.route.queryParams.subscribe(params => {
+      const categorieId = params['categorieId'];
+      if (categorieId) {
+        this.produitService.getProductsByCategory(categorieId).subscribe((data: Product[]) => {
+          this.produits = data;
+        });
+      } else {
+        console.log('error')
+      }
     });
  
 

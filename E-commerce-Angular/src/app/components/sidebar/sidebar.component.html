@@ -1,9 +1,7 @@
 <aside>
     <nav>
-        <ul>
-            <li><a routerLink="/">Home</a></li>
-            <li><a routerLink="/produits">Produits</a></li>
-            <li><a routerLink="/categories">Categories</a></li>
+        <ul class="nav-item" *ngFor="let categorie of categories">
+            <li><a class="nav-link" [routerLink]="['/produits']" [queryParams]="{ categorieId: categorie.id }">{{ categorie.nom }}</a></li>
         </ul>
     </nav>
 </aside>

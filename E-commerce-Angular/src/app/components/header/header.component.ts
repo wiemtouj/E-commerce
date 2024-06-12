@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit {
   constructor(private categoryService: CategorieService) { }
 
   ngOnInit(): void {
+    this.categoryService.getCategories().subscribe((data: Categorie[]) => {
+      this.categories = data;
+    });
    
   }
 

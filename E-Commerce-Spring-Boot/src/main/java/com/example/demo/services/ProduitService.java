@@ -15,9 +15,7 @@ public class ProduitService {
 	@Autowired
     private ProductRepository produitRepository;
 	
-	public List<Product> findAll() {
-        return produitRepository.findAll();
-    }
+	
 	
 	 public Product findById(int id) {
 	        return produitRepository.findById(id).orElse(null);
@@ -31,9 +29,14 @@ public class ProduitService {
 	        produitRepository.deleteById(id);
 	    }
 	    
-	    public List<Product> getProductsByCategory(Long categoryId) {
-	        return produitRepository.findByCategorie_Id(categoryId);
+	    public List<Product> getProductsByCategorie(Long categorieId) {
+	        return produitRepository.findByCategorie_Id(categorieId);
 	    }
+
+	    public List<Product> getAllProducts() {
+	        return produitRepository.findAll();
+	    }
+	    
 	    
 
 }

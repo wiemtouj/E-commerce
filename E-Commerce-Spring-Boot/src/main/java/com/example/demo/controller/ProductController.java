@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.List;
-
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -24,13 +24,13 @@ import com.example.demo.services.ProduitService;
 @RequestMapping("/api/products")
 public class ProductController {
 	
+    private static final Logger logger = Logger.getLogger(ProductController.class.getName());
+
+	
 	 @Autowired
 	    private ProduitService produitService;
 
-	    @GetMapping
-	    public List<Product> getAllProduits() {
-	        return produitService.findAll();
-	    }
+	 
 
 	    @GetMapping("/{id}")
 	    public Product getProduitById(@PathVariable int id) {
@@ -58,6 +58,14 @@ public class ProductController {
 	    @DeleteMapping("/{id}")
 	    public void deleteProduit(@PathVariable int id) {
 	        produitService.deleteById(id);
+	    }
+	    
+	    @GetMapping
+	    public List<Product> getProductsByCategorie(@RequestParam(name = "categorieId", required = false) Long categorieId ) {
+	        logger.info("Received categoryId: " + categorieId);
+	        
+	            return produitService.getProductsByCategorie(categorieId);
+	        
 	    }
 	    
 	 

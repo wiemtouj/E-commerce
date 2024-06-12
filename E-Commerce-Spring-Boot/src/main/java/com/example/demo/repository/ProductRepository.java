@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import com.example.demo.entity.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Integer>{
-	 List<Product> findByCategorie_Id(Long categoryId);
+	 List<Product> findByCategorie_Id(Long categorieId);
 
 }
