@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { RouterModule } from '@angular/router';
+
 
 
 
@@ -32,7 +34,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule // Add FormsModule here
+    AppRoutingModule, // Add FormsModule here
+    RouterModule // Importez RouterModule pour activer les fonctionnalités de routage
+
 
   ],
   providers: [],

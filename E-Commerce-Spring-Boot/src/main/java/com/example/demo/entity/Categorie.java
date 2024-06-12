@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import java.util.List;
+import java.util.Set;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -18,6 +19,7 @@ public class Categorie {
 
     private String nom;
     private String description;
+    
 
 	public int getId() {
 		return id;
@@ -42,13 +44,5 @@ public class Categorie {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-
-    
-    
-    
-    
-    
-    
 
 }
